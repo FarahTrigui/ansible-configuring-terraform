@@ -27,7 +27,12 @@ resource "docker_container" "web" {
     internal = 22
     external = 2200 + count.index
   }
-  
+   # Apache port
+  ports {
+    internal = 80
+    external = 8080 + count.index
+  }
+
   # Keep the container running
   
 }
