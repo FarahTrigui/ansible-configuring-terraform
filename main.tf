@@ -13,7 +13,7 @@ provider "docker" {
 
 # Pull the Docker image with SSH enabled
 resource "docker_image" "ubuntu_sshd" {
-  name = "rastasheep/ubuntu-sshd:22.04"
+  name = "rastasheep/ubuntu-sshd"
 }
 
 # Create two Docker containers (simulate two servers)
@@ -29,5 +29,5 @@ resource "docker_container" "web" {
   }
   
   # Keep the container running
-  command = "sleep infinity"
+  
 }
